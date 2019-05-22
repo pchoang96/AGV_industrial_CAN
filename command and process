@@ -1,0 +1,44 @@
+Presetting:
+	SSP 	0x16 (22): Maximum allowable speed
+	SMV 	0x18 (24): Minimum speed (break when below)
+	ENC 	0x1E (30): Set encoder resolution
+	GENC	0x1F (31): Get encoder resolution
+
+	SMOD:	0x2A (42): set running mode
+		1) Control mode (Bit2, bit1, bit0)
+			000: The speed controller is in effect;
+			001: The position controller is in effect;
+			010: The step controller is valid;
+			011: Torque control mode
+	GMOD:	0x2B (43): get running mode
+******************************************************************************
+Running with velocity:
+	V:      0x90(144): Set running speed (motor run now)
+	GV:	0x91(145): Read actual speed
+	GVE:	0x92(146): Read speed error
+	GSV:	0x93(147): Read the setting speed
+
+****************************************************************************
+Running with position:
+	SER:	0x39 (57): Set the max position tracking error (-255~255)
+	GER:	0x3A (58): Read the max position tracking error5
+	----------------------------------------------------------------------
+	SPH: 	0x33 (51): set positive maximum position of motor motion 			   (0~2100000000)
+	GPH:	0x34 (52): read the upper limit op position
+	SPL: 	0x35 (53): set reverse maximum position of motor motion 			   (0~-2100000000)
+	GPH:	0x36 (54): read the lower limit op position
+	----------------------------------------------------------------------
+	PO:	0x98(152): set the current positon as the absolute position
+	M:	0x99(153): set the absolute position and motor moving
+	MM:	0x9E(158): set the absolute position and wait
+	MRUN:	0xA0(160): Starting movement
+	--------------------------------------------------------------------
+	MR:	0x9A(154): set the relative motion and start to move
+	MMR: 	0x9F(159): set the relative motion and wait
+	MRUN:	0xA0(160): Starting movement
+	--------------------------------------------------------------------	
+	GM:	0x9B(155): read actual location
+	GME:	0x9C(156): position tracking error	
+	GSM:	0x9D(157): read setting location
+
+

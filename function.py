@@ -37,7 +37,7 @@ wheels_radius =50.0
 wheels_diameter = 100.0
 wheels_encoder = 4000.0
 motorLeft = 25
-motorRight = 9
+motorRight = 59
 wheel_ticLength = wheels_diameter*pi/wheels_encoder
 ##############################################
 hex_send = [0,0,0,0,0,0,0,0]
